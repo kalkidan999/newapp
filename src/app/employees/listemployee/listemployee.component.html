@@ -1,20 +1,29 @@
 <div class="panel panel-primary" *ngFor="let employee of employees">
+    <div class="container">
+        <nav class="navbar navbar-default">
+          <ul class="nav navbar-nav">
+      <li> <a routerLink="list">List</a>
+          </li>
+      <li><a routerLink="create">Create</a></li>
+          </ul>
+      </nav>
+      </div>
     <div class="panel-heading"> 
-        <h1 class="panel-title">{{employee.name}}</h1>
+        <h1 class="panel-title">{{employee.Firstname}}</h1>
     </div>
     <div class="panel-body">
         <div class="col-xs-10">
             <div class="row">
                 <div class="col-xs-4">
-                    <img class="imageheight" [src]="employee.photoPath"/>
-                </div>
+                   <!-- <img class="imageheight" [src]="employee.photoPath"/> -->
+                </div> 
                 <div class="col-xs-8">
                     <div class="row">
                         <div class="col-xs-6">
                             Name:
                              </div>
                     <div class="col-xs-6">
-                        {{employee.name}}
+                        {{employee.Firstname}}
                          </div>
                          <div class="col-xs-6">
                             Gender:
@@ -34,12 +43,7 @@
                     <div class="col-xs-6">
                         {{employee.email}}
                          </div>
-                         <div class="col-xs-6">
-                            Department:
-                             </div>
-                    <div class="col-xs-6">
-                        {{employee.department}}
-                         </div>
+                         
                         </div>
             </div>
         </div>

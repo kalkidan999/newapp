@@ -8,18 +8,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 const appRoutes: Routes = [
   {path: 'list', component: ListemployeeComponent},
   {path: 'create', component: CreateemployeeComponent},
-  {path: '', redirectTo: '/list', pathMatch: 'full'}
+  {path: 'login', component: HomepageComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     ListemployeeComponent,
-    CreateemployeeComponent
+    CreateemployeeComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
